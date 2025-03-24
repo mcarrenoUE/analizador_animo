@@ -1,0 +1,14 @@
+# Evitar subir el entorno virtual
+venv/
+
+# Archivos de Python temporales
+__pycache__/
+*.pyc
+
+# Archivos del sistema
+.DS_Store
+.env
+
+# Datos personales (si los usas después)
+*.log
+*.sqlite

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Analizador de Estado de Ánimo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>🧠 Analizador de Estado de Ánimo</h1>
+        <form method="POST">
+            <textarea name="comentario" placeholder="Escribe un comentario..." required>{{ comentario }}</textarea>
+            <button type="submit">Analizar</button>
+        </form>
+
+        {% if resultado %}
+            <div class="resultado">
+                <p><strong>Comentario:</strong> {{ comentario }}</p>
+                <p><strong>Resultado:</strong> {{ resultado }} ({{ porcentaje }}%)</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
